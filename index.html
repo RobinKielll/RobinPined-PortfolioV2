@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Robin Kiel Pineda | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --color-primary-fixed: #e5e2e1;
+            --color-on-primary-fixed: #1c1b1b;
+            --color-on-primary-fixed-variant: #474646;
+            --color-on-tertiary-fixed-variant: #484645;
+            --color-on-tertiary-container: #868381;
+            --color-surface-dim: #dadada;
+            --color-primary: #000000;
+            --color-tertiary-fixed: #e6e1df;
+            --color-on-error-container: #93000a;
+            --color-outline-variant: #c4c7c7;
+            --color-on-primary-container: #858383;
+            --color-on-background: #1a1c1c;
+            --color-outline: #747878;
+            --color-inverse-primary: #c8c6c5;
+            --color-secondary: #2563eb;
+            --color-on-secondary-fixed: #00174b;
+            --color-error-container: #ffdad6;
+            --color-secondary-container: #316bf3;
+            --color-surface-container-low: #f3f3f3;
+            --color-secondary-fixed: #dbe1ff;
+            --color-on-tertiary-fixed: #1d1b1a;
+            --color-inverse-on-surface: #f0f1f1;
+            --color-surface-container-lowest: #ffffff;
+            --color-on-primary: #ffffff;
+            --color-surface-tint: #5f5e5e;
+            --color-tertiary-container: #1d1b1a;
+            --color-surface-container-high: #e8e8e8;
+            --color-on-tertiary: #ffffff;
+            --color-surface-variant: #e2e2e2;
+            --color-on-secondary-fixed-variant: #003ea8;
+            --color-on-secondary-container: #fefcff;
+            --color-on-surface-variant: #444748;
+            --color-primary-fixed-dim: #c8c6c5;
+            --color-surface-bright: #fafafa;
+            --color-primary-container: #1c1b1b;
+            --color-surface-container: #eeeeee;
+            --color-tertiary: #000000;
+            --color-surface: #fafafa;
+            --color-background: #fafafa;
+            --color-on-surface: #1a1c1c;
+            --color-tertiary-fixed-dim: #cac6c3;
+            --color-on-secondary: #ffffff;
+            --color-secondary-fixed-dim: #b4c5ff;
+            --color-surface-container-highest: #e2e2e2;
+            --color-inverse-surface: #2f3131;
+            --color-error: #ba1a1a;
+            --color-on-error: #ffffff;
+        }
+
+        .dark {
+            --color-primary-fixed: #e5e2e1;
+            --color-on-primary-fixed: #1c1b1b;
+            --color-on-primary-fixed-variant: #474646;
+            --color-on-tertiary-fixed-variant: #484645;
+            --color-on-tertiary-container: #868381;
+            --color-surface-dim: #dadada;
+            --color-primary: #ffffff;
+            --color-tertiary-fixed: #e6e1df;
+            --color-on-error-container: #93000a;
+            --color-outline-variant: #444748;
+            --color-on-primary-container: #858383;
+            --color-on-background: #fafafa;
+            --color-outline: #747878;
+            --color-inverse-primary: #c8c6c5;
+            --color-secondary: #60a5fa;
+            --color-on-secondary-fixed: #00174b;
+            --color-error-container: #ffdad6;
+            --color-secondary-container: #316bf3;
+            --color-surface-container-low: #1e1e1e;
+            --color-secondary-fixed: #dbe1ff;
+            --color-on-tertiary-fixed: #1d1b1a;
+            --color-inverse-on-surface: #121212;
+            --color-surface-container-lowest: #121212;
+            --color-on-primary: #000000;
+            --color-surface-tint: #5f5e5e;
+            --color-tertiary-container: #1d1b1a;
+            --color-surface-container-high: #2a2a2a;
+            --color-on-tertiary: #ffffff;
+            --color-surface-variant: #2a2a2a;
+            --color-on-secondary-fixed-variant: #003ea8;
+            --color-on-secondary-container: #fefcff;
+            --color-on-surface-variant: #c4c7c7;
+            --color-primary-fixed-dim: #c8c6c5;
+            --color-surface-bright: #121212;
+            --color-primary-container: #1c1b1b;
+            --color-surface-container: #242424;
+            --color-tertiary: #000000;
+            --color-surface: #121212;
+            --color-background: #121212;
+            --color-on-surface: #fafafa;
+            --color-tertiary-fixed-dim: #cac6c3;
+            --color-on-secondary: #000000;
+            --color-secondary-fixed-dim: #b4c5ff;
+            --color-surface-container-highest: #333333;
+            --color-inverse-surface: #fafafa;
+            --color-error: #ba1a1a;
+            --color-on-error: #ffffff;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed": "var(--color-primary-fixed)",
+                        "on-primary-fixed": "var(--color-on-primary-fixed)",
+                        "on-primary-fixed-variant": "var(--color-on-primary-fixed-variant)",
+                        "on-tertiary-fixed-variant": "var(--color-on-tertiary-fixed-variant)",
+                        "on-tertiary-container": "var(--color-on-tertiary-container)",
+                        "surface-dim": "var(--color-surface-dim)",
+                        "primary": "var(--color-primary)",
+                        "tertiary-fixed": "var(--color-tertiary-fixed)",
+                        "on-error-container": "var(--color-on-error-container)",
+                        "outline-variant": "var(--color-outline-variant)",
+                        "on-primary-container": "var(--color-on-primary-container)",
+                        "on-background": "var(--color-on-background)",
+                        "outline": "var(--color-outline)",
+                        "inverse-primary": "var(--color-inverse-primary)",
+                        "secondary": "var(--color-secondary)",
+                        "on-secondary-fixed": "var(--color-on-secondary-fixed)",
+                        "error-container": "var(--color-error-container)",
+                        "secondary-container": "var(--color-secondary-container)",
+                        "surface-container-low": "var(--color-surface-container-low)",
+                        "secondary-fixed": "var(--color-secondary-fixed)",
+                        "on-tertiary-fixed": "var(--color-on-tertiary-fixed)",
+                        "inverse-on-surface": "var(--color-inverse-on-surface)",
+                        "surface-container-lowest": "var(--color-surface-container-lowest)",
+                        "on-primary": "var(--color-on-primary)",
+                        "surface-tint": "var(--color-surface-tint)",
+                        "tertiary-container": "var(--color-tertiary-container)",
+                        "surface-container-high": "var(--color-surface-container-high)",
+                        "on-tertiary": "var(--color-on-tertiary)",
+                        "surface-variant": "var(--color-surface-variant)",
+                        "on-secondary-fixed-variant": "var(--color-on-secondary-fixed-variant)",
+                        "on-secondary-container": "var(--color-on-secondary-container)",
+                        "on-surface-variant": "var(--color-on-surface-variant)",
+                        "primary-fixed-dim": "var(--color-primary-fixed-dim)",
+                        "surface-bright": "var(--color-surface-bright)",
+                        "primary-container": "var(--color-primary-container)",
+                        "surface-container": "var(--color-surface-container)",
+                        "tertiary": "var(--color-tertiary)",
+                        "surface": "var(--color-surface)",
+                        "background": "var(--color-background)",
+                        "on-surface": "var(--color-on-surface)",
+                        "tertiary-fixed-dim": "var(--color-tertiary-fixed-dim)",
+                        "on-secondary": "var(--color-on-secondary)",
+                        "secondary-fixed-dim": "var(--color-secondary-fixed-dim)",
+                        "surface-container-highest": "var(--color-surface-container-highest)",
+                        "inverse-surface": "var(--color-inverse-surface)",
+                        "error": "var(--color-error)",
+                        "on-error": "var(--color-on-error)"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "container-max": "1200px",
+                        "sm": "12px",
+                        "xl": "80px",
+                        "md": "24px",
+                        "base": "8px",
+                        "xs": "4px",
+                        "lg": "48px",
+                        "gutter": "24px",
+                        "xxl": "120px"
+                    },
+                    fontFamily: {
+                        "headline-lg": ["Outfit"],
+                        "body-md": ["Outfit"],
+                        "headline-lg-mobile": ["Outfit"],
+                        "label-md": ["Outfit"],
+                        "headline-md": ["Outfit"],
+                        "body-lg": ["Outfit"],
+                        "display": ["Outfit"],
+                        "label-sm": ["Outfit"],
+                        "display-mobile": ["Outfit"]
+                    },
+                    fontSize: {
+                        "headline-lg": ["40px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "body-md": ["16px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }],
+                        "headline-lg-mobile": ["32px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "label-md": ["14px", { lineHeight: "1.4", letterSpacing: "0.02em", fontWeight: "500" }],
+                        "headline-md": ["24px", { lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600" }],
+                        "body-lg": ["18px", { lineHeight: "1.7", letterSpacing: "0", fontWeight: "400" }],
+                        "display": ["72px", { lineHeight: "1.1", letterSpacing: "-0.04em", fontWeight: "700" }],
+                        "label-sm": ["12px", { lineHeight: "1.2", letterSpacing: "0.05em", fontWeight: "600" }],
+                        "display-mobile": ["40px", { lineHeight: "1.1", letterSpacing: "-0.03em", fontWeight: "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-background text-on-background antialiased selection:bg-secondary selection:text-on-secondary">
+    <!-- TopNavBar -->
+    <header
+        class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 dark:border-outline/20">
+        <div class="flex justify-between items-center px-gutter md:px-xl py-base max-w-container-max mx-auto">
+            <a class="font-headline-md text-headline-md tracking-tighter text-primary dark:text-on-surface"
+                href="#">RKVP_</a>
+            <div class="flex items-center gap-sm">
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex gap-md">
+                    <a class="text-primary dark:text-on-surface font-semibold border-b border-primary dark:border-on-surface pb-1 font-label-md text-label-md"
+                        href="#home">Home</a>
+                    <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-on-surface transition-colors duration-200 font-label-md text-label-md"
+                        href="#about">About</a>
+                    <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-on-surface transition-colors duration-200 font-label-md text-label-md"
+                        href="#projects">Projects</a>
+                    <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-on-surface transition-colors duration-200 font-label-md text-label-md"
+                        href="#skills">Skills</a>
+                    <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-on-surface transition-colors duration-200 font-label-md text-label-md"
+                        href="#certifications">Certifications</a>
+                    <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-on-surface transition-colors duration-200 font-label-md text-label-md"
+                        href="#services">Services</a>
+                    <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-on-surface transition-colors duration-200 font-label-md text-label-md"
+                        href="#contact">Contact</a>
+                </nav>
+                <!-- Theme Toggle -->
+                <button id="theme-toggle"
+                    class="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center p-xs rounded-full hover:bg-surface-container-low">
+                    <span class="material-symbols-outlined dark:hidden">dark_mode</span>
+                    <span class="material-symbols-outlined hidden dark:block">light_mode</span>
+                </button>
+                <!-- Mobile Menu Toggle (Simplified for design intent) -->
+                <button class="md:hidden text-primary">
+                    <span class="material-symbols-outlined" data-icon="menu">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="pt-[80px]"> <!-- Offset for fixed header -->
+        <!-- 1. HERO -->
+        <section
+            class="px-gutter md:px-xl py-xxl max-w-container-max mx-auto flex flex-col md:flex-row items-center gap-xl md:min-h-[819px]"
+            id="home">
+            <div class="flex-1 space-y-md">
+                <div
+                    class="inline-flex items-center gap-xs px-sm py-xs bg-surface-container-low rounded-lg text-on-surface-variant font-label-sm text-label-sm border border-outline-variant/30">
+                    <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                    Available for new opportunities
+                </div>
+                <h1
+                    class="font-display-mobile text-display-mobile md:font-display md:text-display text-primary tracking-tighter">
+                    Robin Kiel Pineda
+                </h1>
+                <p class="font-headline-md text-headline-md text-on-surface-variant max-w-2xl">
+                    Full Stack Web &amp; Mobile Developer | AI &amp; Automation
+                </p>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    Building functional, well-crafted web and mobile applications while exploring the intersection of automation and AI. I turn ideas into working products with clean code and a sharp eye for detail.
+                </p>
+                <div class="flex flex-wrap gap-sm pt-sm">
+                    <a class="inline-flex items-center justify-center px-lg py-sm bg-primary text-on-primary font-label-md text-label-md rounded hover:bg-inverse-surface transition-all duration-200"
+                        href="#projects">
+                        View Projects
+                    </a>
+                    <a class="inline-flex items-center justify-center px-lg py-sm bg-transparent text-primary font-label-md text-label-md border border-primary rounded hover:bg-surface-container-low transition-all duration-200"
+                        href="#contact">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+            <div class="flex-1 w-full flex justify-center md:justify-end relative">
+                <!-- Decorative background element -->
+                <div
+                    class="absolute w-[300px] h-[300px] bg-secondary-container rounded-full blur-3xl opacity-20 -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                </div>
+                <img alt="Robin Kiel Pineda Portrait"
+                    class="w-[320px] md:w-[400px] h-[400px] md:h-[500px] object-cover rounded-xl border border-outline-variant/30 bg-surface-container-lowest p-xs shadow-[0_4px_20px_rgba(0,0,0,0.04)] grayscale hover:grayscale-0 transition-all duration-500"
+                    data-alt="A professional portrait of a tech professional in a bright, modern studio setting. The subject is wearing a dark minimalist blazer over a white t-shirt. High-end lighting, soft shadows, clean white background with a subtle gradient. High-contrast monochromatic aesthetic with a touch of blue accent."
+                    src="pic1_.jpeg" />
+            </div>
+        </section>
+        <!-- 2. TECHNOLOGIES -->
+        <section
+            class="border-y border-outline-variant/30 py-lg overflow-hidden bg-primary text-on-primary transition-colors duration-300">
+            <div class="max-w-container-max mx-auto">
+                <p class="text-center opacity-80 font-label-md text-label-md mb-md uppercase tracking-widest px-gutter md:px-xl">
+                    Technologies I work with</p>
+                <div class="flex flex-nowrap overflow-x-auto justify-start xl:justify-center items-center gap-md md:gap-lg pb-4 px-gutter md:px-xl [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                    <div class="flex items-center gap-sm shrink-0">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML" class="w-6 h-6 md:w-8 md:h-8" />
+                        <span class="font-body-lg text-body-lg font-semibold">HTML</span>
+                    </div>
+                    <div class="flex items-center gap-sm shrink-0">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS" class="w-6 h-6 md:w-8 md:h-8" />
+                        <span class="font-body-lg text-body-lg font-semibold">CSS</span>
+                    </div>
+                    <div class="flex items-center gap-sm shrink-0">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="PHP" class="w-6 h-6 md:w-8 md:h-8" />
+                        <span class="font-body-lg text-body-lg font-semibold">PHP</span>
+                    </div>
+                    <div class="flex items-center gap-sm shrink-0">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-6 h-6 md:w-8 md:h-8" />
+                        <span class="font-body-lg text-body-lg font-semibold">JavaScript</span>
+                    </div>
+                    <div class="flex items-center gap-sm shrink-0">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" class="w-6 h-6 md:w-8 md:h-8" />
+                        <span class="font-body-lg text-body-lg font-semibold">Java</span>
+                    </div>
+                    <div class="flex items-center gap-sm shrink-0">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg" alt="Kotlin" class="w-6 h-6 md:w-8 md:h-8" />
+                        <span class="font-body-lg text-body-lg font-semibold">Kotlin</span>
+                    </div>
+                    <div class="flex items-center gap-sm shrink-0">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL" class="w-6 h-6 md:w-8 md:h-8" />
+                        <span class="font-body-lg text-body-lg font-semibold">MySQL</span>
+                    </div>
+                    <div class="flex items-center gap-sm shrink-0">
+                        <img src="https://cdn.simpleicons.org/n8n/FF6D5A" alt="n8n" class="w-6 h-6 md:w-8 md:h-8" />
+                        <span class="font-body-lg text-body-lg font-semibold">n8n</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 3. ABOUT -->
+        <section class="px-gutter md:px-xl py-xxl max-w-container-max mx-auto" id="about">
+            <div class="flex flex-col md:flex-row gap-xl items-center">
+                <div class="flex-1 w-full relative">
+                    <div
+                        class="absolute inset-0 border border-outline-variant rounded-xl transform translate-x-4 translate-y-4 -z-10">
+                    </div>
+                    <div class="w-full rounded-xl overflow-hidden" style="aspect-ratio: 4/5;">
+                        <img alt="Robin Kiel Pineda standing"
+                            class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                            style="object-position: center 20%;"
+                            src="pic 2.jpg" />
+                    </div>
+                </div>
+                <div class="flex-1 space-y-md">
+                    <h2 class="font-headline-lg text-headline-lg text-primary">About Me</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant">
+                        I am a Full Stack Web &amp; Mobile Developer who loves bridging the gap between traditional software development and intelligent automation. My focus is on building practical, scalable applications across platforms that solve real-world problems.
+                    </p>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Whether it's designing a clean user interface from scratch, developing mobile apps, or setting up automated AI workflows in the background, I enjoy the entire process of turning ideas into functional digital products. I'm constantly learning and adapting to the latest tech to build smarter solutions.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- 4. FEATURED PROJECTS -->
+        <section class="bg-surface-container-low py-xxl" id="projects">
+            <div class="px-gutter md:px-xl max-w-container-max mx-auto">
+                <div class="mb-xl max-w-2xl">
+                    <h2 class="font-headline-lg text-headline-lg text-primary mb-sm">Featured Projects</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant">A selection of my recent work,
+                        showcasing robust architectures and clean user interfaces.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+                    <!-- Project 1 -->
+                    <div
+                        class="group bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-lg transition-all duration-300">
+                        <div class="aspect-video bg-surface-variant overflow-hidden">
+                            <img alt="Project 1"
+                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmUxO9YmjsT8h_gA1WULklfM7O-9FFaJjLAiCRbO_xAQS9rq6_lHXIcvY6azp0qa6GXRCSqv-0wChckRmLY1UUpDXS1EhPm9_qgXJKWS3CXQjHsVKGYQvMfV-d-rD-nnfPNVmDnud6IfgU7bTGVJX9kjibWlzxN1cjchNfKi1lfxese0pTwMsx_RlmUmHovP5xcASr5CLKIn5aosVKOTDiU2BMuvmOGqNQTXSRqpFHzJ4pSqQA0NXleMq9RwEHPWqoxugLmRYw8Ew" />
+                        </div>
+                        <div class="p-md space-y-sm">
+                            <h3 class="font-headline-md text-headline-md text-primary">E-Commerce Platform</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">A high-performance
+                                storefront built with Next.js and Stripe integration. Features real-time inventory and
+                                seamless checkout.</p>
+                            <div class="flex flex-wrap gap-xs pt-xs">
+                                <span
+                                    class="px-sm py-xs bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded">Next.js</span>
+                                <span
+                                    class="px-sm py-xs bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded">Tailwind</span>
+                                <span
+                                    class="px-sm py-xs bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded">Stripe</span>
+                            </div>
+                            <div class="flex gap-sm pt-sm">
+                                <a class="text-primary font-label-md text-label-md hover:text-secondary flex items-center gap-xs"
+                                    href="#"><span class="material-symbols-outlined text-sm">code</span> GitHub</a>
+                                <a class="text-primary font-label-md text-label-md hover:text-secondary flex items-center gap-xs"
+                                    href="#"><span class="material-symbols-outlined text-sm">open_in_new</span> Live
+                                    Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div
+                        class="group bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-lg transition-all duration-300">
+                        <div class="aspect-video bg-surface-variant overflow-hidden">
+                            <img alt="Project 2"
+                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCABl5ImtycFaQE2s8gi8c8ACVuMbOxaK-TiwpcX6VaB9Mwa_zgSl4LC3FjlNbeo8SvdV7A4p3nzrs-t_sKDRMFXFIF8V5nsJ1ISFqKcUPMKOWTwEtSXyViD9pMWrm75rCpPa3WoQ_2fpITh4ls5tjDN0gaDKzPgMv0qqHNuniOfy6yWT4bTj6bP77MXa2mUX6E7lI-9jmaG5u3-5I-AWU-6M0rIZRouVFj3zUa7N6bD9FP9N9_ynYsNUO_KfmHd8pwPL1sAvEpemc" />
+                        </div>
+                        <div class="p-md space-y-sm">
+                            <h3 class="font-headline-md text-headline-md text-primary">Analytics Dashboard</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Comprehensive data
+                                visualization tool for enterprise clients. Handles millions of data points with
+                                sub-second rendering.</p>
+                            <div class="flex flex-wrap gap-xs pt-xs">
+                                <span
+                                    class="px-sm py-xs bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded">React</span>
+                                <span
+                                    class="px-sm py-xs bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded">D3.js</span>
+                                <span
+                                    class="px-sm py-xs bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded">Node.js</span>
+                            </div>
+                            <div class="flex gap-sm pt-sm">
+                                <a class="text-primary font-label-md text-label-md hover:text-secondary flex items-center gap-xs"
+                                    href="#"><span class="material-symbols-outlined text-sm">code</span> GitHub</a>
+                                <a class="text-primary font-label-md text-label-md hover:text-secondary flex items-center gap-xs"
+                                    href="#"><span class="material-symbols-outlined text-sm">open_in_new</span> Live
+                                    Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div
+                        class="group bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-lg transition-all duration-300">
+                        <div class="aspect-video bg-surface-variant overflow-hidden">
+                            <img alt="Project 3"
+                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU7VOe24HHEnL_SbiT9BhW7sCyi0h6ak4OJ7k8J3bCDxmGEkMjVKLw1aRfLa1UWl0JiONBDkcGt_ZBjrP3pHkAB4UseaHjPAZZL24RhTOOLq4wlGQM8tde2c95_tBsQj7M_m05mJyVS39lSQIi0ZhexuZHpLOCmFMTDKCNYMigg5dPBaUvRdTlEuk7uUeowmCIvxu-aBF024N6HuFoCQNdnXunW3IqNo3Brn1XJiBv8bUTpx_ttGTzO1Iy92xbKKOR1rKNrAtHFQk" />
+                        </div>
+                        <div class="p-md space-y-sm">
+                            <h3 class="font-headline-md text-headline-md text-primary">AI Content Generator</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Automated content
+                                creation suite leveraging LLMs. Includes custom fine-tuning pipelines and intuitive
+                                editor interface.</p>
+                            <div class="flex flex-wrap gap-xs pt-xs">
+                                <span
+                                    class="px-sm py-xs bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded">Python</span>
+                                <span
+                                    class="px-sm py-xs bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded">OpenAI</span>
+                                <span
+                                    class="px-sm py-xs bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded">Vue.js</span>
+                            </div>
+                            <div class="flex gap-sm pt-sm">
+                                <a class="text-primary font-label-md text-label-md hover:text-secondary flex items-center gap-xs"
+                                    href="#"><span class="material-symbols-outlined text-sm">code</span> GitHub</a>
+                                <a class="text-primary font-label-md text-label-md hover:text-secondary flex items-center gap-xs"
+                                    href="#"><span class="material-symbols-outlined text-sm">open_in_new</span> Live
+                                    Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Projects 4,5,6 similarly structured for a full grid -->
+                </div>
+                <div class="mt-xl text-center">
+                    <a class="inline-flex items-center justify-center px-lg py-sm bg-transparent text-primary font-label-md text-label-md border border-primary rounded hover:bg-surface-container-low transition-all duration-200"
+                        href="#">
+                        View All Projects
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- 5. SKILLS -->
+        <section class="px-gutter md:px-xl py-xxl max-w-container-max mx-auto" id="skills">
+            <div class="text-center mb-xl max-w-2xl mx-auto">
+                <h2 class="font-headline-lg text-headline-lg text-primary mb-sm">Skills &amp; Expertise</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant">A comprehensive overview of my technical
+                    capabilities and proficiency levels.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+                <!-- Category 1 -->
+                <div class="space-y-md border border-outline-variant/30 p-lg rounded-xl">
+                    <h3 class="font-headline-md text-headline-md text-primary flex items-center gap-sm"><span
+                            class="material-symbols-outlined text-secondary">desktop_windows</span> Frontend</h3>
+                    <div class="space-y-sm">
+                        <div>
+                            <div class="flex justify-between font-label-md text-label-md mb-xs"><span>React /
+                                    Next.js</span><span>95%</span></div>
+                            <div class="h-2 bg-surface-container-high rounded-full overflow-hidden">
+                                <div class="h-full bg-secondary w-[95%]"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between font-label-md text-label-md mb-xs">
+                                <span>TypeScript</span><span>90%</span>
+                            </div>
+                            <div class="h-2 bg-surface-container-high rounded-full overflow-hidden">
+                                <div class="h-full bg-secondary w-[90%]"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between font-label-md text-label-md mb-xs"><span>Tailwind
+                                    CSS</span><span>95%</span></div>
+                            <div class="h-2 bg-surface-container-high rounded-full overflow-hidden">
+                                <div class="h-full bg-secondary w-[95%]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Category 2 -->
+                <div class="space-y-md border border-outline-variant/30 p-lg rounded-xl">
+                    <h3 class="font-headline-md text-headline-md text-primary flex items-center gap-sm"><span
+                            class="material-symbols-outlined text-secondary">dns</span> Backend</h3>
+                    <div class="space-y-sm">
+                        <div>
+                            <div class="flex justify-between font-label-md text-label-md mb-xs"><span>Node.js /
+                                    Express</span><span>85%</span></div>
+                            <div class="h-2 bg-surface-container-high rounded-full overflow-hidden">
+                                <div class="h-full bg-secondary w-[85%]"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between font-label-md text-label-md mb-xs"><span>Python /
+                                    Django</span><span>80%</span></div>
+                            <div class="h-2 bg-surface-container-high rounded-full overflow-hidden">
+                                <div class="h-full bg-secondary w-[80%]"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between font-label-md text-label-md mb-xs"><span>PostgreSQL /
+                                    MongoDB</span><span>85%</span></div>
+                            <div class="h-2 bg-surface-container-high rounded-full overflow-hidden">
+                                <div class="h-full bg-secondary w-[85%]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Category 3 -->
+                <div class="space-y-md border border-outline-variant/30 p-lg rounded-xl">
+                    <h3 class="font-headline-md text-headline-md text-primary flex items-center gap-sm"><span
+                            class="material-symbols-outlined text-secondary">smart_toy</span> AI &amp; Tools</h3>
+                    <div class="space-y-sm">
+                        <div>
+                            <div class="flex justify-between font-label-md text-label-md mb-xs"><span>LLM
+                                    Integration</span><span>85%</span></div>
+                            <div class="h-2 bg-surface-container-high rounded-full overflow-hidden">
+                                <div class="h-full bg-secondary w-[85%]"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between font-label-md text-label-md mb-xs"><span>Docker /
+                                    CI/CD</span><span>80%</span></div>
+                            <div class="h-2 bg-surface-container-high rounded-full overflow-hidden">
+                                <div class="h-full bg-secondary w-[80%]"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between font-label-md text-label-md mb-xs"><span>Git /
+                                    Agile</span><span>90%</span></div>
+                            <div class="h-2 bg-surface-container-high rounded-full overflow-hidden">
+                                <div class="h-full bg-secondary w-[90%]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. CERTIFICATIONS & BADGES -->
+        <section class="bg-surface-container-low py-xxl" id="certifications">
+            <div class="px-gutter md:px-xl max-w-container-max mx-auto">
+                <div class="text-center mb-xl max-w-2xl mx-auto">
+                    <h2 class="font-headline-lg text-headline-lg text-primary mb-sm">Certifications &amp; Badges</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant">Verified credentials and professional
+                        achievements that validate my expertise across platforms.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-lg">
+
+                    <!-- Cert 1 -->
+                    <div class="group bg-surface-container-lowest rounded-xl border border-outline-variant/30 p-lg hover:border-secondary hover:shadow-lg transition-all duration-300 flex gap-md items-start">
+                        <div class="w-14 h-14 shrink-0 rounded-xl bg-surface-container flex items-center justify-center text-secondary border border-outline-variant/20 group-hover:bg-secondary group-hover:text-on-secondary transition-all duration-300">
+                            <span class="material-symbols-outlined text-3xl">workspace_premium</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline-md text-headline-md text-primary leading-tight">AWS Certified Solutions Architect</h3>
+                            <p class="font-label-md text-label-md text-secondary mt-xs">Amazon Web Services</p>
+                            <p class="font-body-md text-body-md text-on-surface-variant mt-xs">Associate level — Cloud architecture, deployment, and best practices.</p>
+                            <span class="inline-flex items-center gap-xs mt-sm px-sm py-xs bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded border border-outline-variant/30">
+                                <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Verified
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Cert 2 -->
+                    <div class="group bg-surface-container-lowest rounded-xl border border-outline-variant/30 p-lg hover:border-secondary hover:shadow-lg transition-all duration-300 flex gap-md items-start">
+                        <div class="w-14 h-14 shrink-0 rounded-xl bg-surface-container flex items-center justify-center text-secondary border border-outline-variant/20 group-hover:bg-secondary group-hover:text-on-secondary transition-all duration-300">
+                            <span class="material-symbols-outlined text-3xl">verified</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline-md text-headline-md text-primary leading-tight">Meta Front-End Developer</h3>
+                            <p class="font-label-md text-label-md text-secondary mt-xs">Meta / Coursera</p>
+                            <p class="font-body-md text-body-md text-on-surface-variant mt-xs">Professional certificate covering React, UI/UX principles, and responsive design.</p>
+                            <span class="inline-flex items-center gap-xs mt-sm px-sm py-xs bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded border border-outline-variant/30">
+                                <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Verified
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Cert 3 -->
+                    <div class="group bg-surface-container-lowest rounded-xl border border-outline-variant/30 p-lg hover:border-secondary hover:shadow-lg transition-all duration-300 flex gap-md items-start">
+                        <div class="w-14 h-14 shrink-0 rounded-xl bg-surface-container flex items-center justify-center text-secondary border border-outline-variant/20 group-hover:bg-secondary group-hover:text-on-secondary transition-all duration-300">
+                            <span class="material-symbols-outlined text-3xl">smart_toy</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline-md text-headline-md text-primary leading-tight">Deep Learning Specialization</h3>
+                            <p class="font-label-md text-label-md text-secondary mt-xs">DeepLearning.AI / Coursera</p>
+                            <p class="font-body-md text-body-md text-on-surface-variant mt-xs">Neural networks, CNNs, RNNs, and transformer architectures.</p>
+                            <span class="inline-flex items-center gap-xs mt-sm px-sm py-xs bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded border border-outline-variant/30">
+                                <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Verified
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Cert 4 -->
+                    <div class="group bg-surface-container-lowest rounded-xl border border-outline-variant/30 p-lg hover:border-secondary hover:shadow-lg transition-all duration-300 flex gap-md items-start">
+                        <div class="w-14 h-14 shrink-0 rounded-xl bg-surface-container flex items-center justify-center text-secondary border border-outline-variant/20 group-hover:bg-secondary group-hover:text-on-secondary transition-all duration-300">
+                            <span class="material-symbols-outlined text-3xl">code</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline-md text-headline-md text-primary leading-tight">Full Stack Open</h3>
+                            <p class="font-label-md text-label-md text-secondary mt-xs">University of Helsinki</p>
+                            <p class="font-body-md text-body-md text-on-surface-variant mt-xs">React, Node.js, GraphQL, TypeScript, and CI/CD pipelines.</p>
+                            <span class="inline-flex items-center gap-xs mt-sm px-sm py-xs bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded border border-outline-variant/30">
+                                <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Verified
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Cert 5 -->
+                    <div class="group bg-surface-container-lowest rounded-xl border border-outline-variant/30 p-lg hover:border-secondary hover:shadow-lg transition-all duration-300 flex gap-md items-start">
+                        <div class="w-14 h-14 shrink-0 rounded-xl bg-surface-container flex items-center justify-center text-secondary border border-outline-variant/20 group-hover:bg-secondary group-hover:text-on-secondary transition-all duration-300">
+                            <span class="material-symbols-outlined text-3xl">dns</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline-md text-headline-md text-primary leading-tight">Google Cloud Associate</h3>
+                            <p class="font-label-md text-label-md text-secondary mt-xs">Google Cloud</p>
+                            <p class="font-body-md text-body-md text-on-surface-variant mt-xs">Infrastructure, compute, storage, and managed services on GCP.</p>
+                            <span class="inline-flex items-center gap-xs mt-sm px-sm py-xs bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded border border-outline-variant/30">
+                                <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Verified
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Cert 6 -->
+                    <div class="group bg-surface-container-lowest rounded-xl border border-outline-variant/30 p-lg hover:border-secondary hover:shadow-lg transition-all duration-300 flex gap-md items-start">
+                        <div class="w-14 h-14 shrink-0 rounded-xl bg-surface-container flex items-center justify-center text-secondary border border-outline-variant/20 group-hover:bg-secondary group-hover:text-on-secondary transition-all duration-300">
+                            <span class="material-symbols-outlined text-3xl">psychology</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline-md text-headline-md text-primary leading-tight">AI Automation Professional</h3>
+                            <p class="font-label-md text-label-md text-secondary mt-xs">n8n / Make Academy</p>
+                            <p class="font-body-md text-body-md text-on-surface-variant mt-xs">Workflow automation, LLM integrations, and no-code/low-code AI pipelines.</p>
+                            <span class="inline-flex items-center gap-xs mt-sm px-sm py-xs bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded border border-outline-variant/30">
+                                <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Verified
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. SERVICES -->
+        <section class="px-gutter md:px-xl py-xxl max-w-container-max mx-auto" id="services">
+            <div class="text-center mb-xl max-w-2xl mx-auto">
+                <h2 class="font-headline-lg text-headline-lg text-primary mb-sm">Services</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant">Specialized offerings designed to elevate
+                    your digital presence and operational efficiency.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+                <div
+                    class="p-xl border border-outline-variant/30 rounded-xl hover:border-secondary transition-colors duration-300 text-center">
+                    <div
+                        class="w-16 h-16 bg-surface-container-low rounded-full flex items-center justify-center mx-auto mb-md text-secondary">
+                        <span class="material-symbols-outlined text-3xl">web</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-sm">Custom Websites</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Bespoke, high-performance web
+                        applications tailored to your specific business needs and brand identity.</p>
+                </div>
+                <div
+                    class="p-xl border border-outline-variant/30 rounded-xl hover:border-secondary transition-colors duration-300 text-center">
+                    <div
+                        class="w-16 h-16 bg-surface-container-low rounded-full flex items-center justify-center mx-auto mb-md text-secondary">
+                        <span class="material-symbols-outlined text-3xl">settings_suggest</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-sm">Business Automation</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Streamline your workflows with custom
+                        software solutions that reduce manual effort and increase productivity.</p>
+                </div>
+                <div
+                    class="p-xl border border-outline-variant/30 rounded-xl hover:border-secondary transition-colors duration-300 text-center">
+                    <div
+                        class="w-16 h-16 bg-surface-container-low rounded-full flex items-center justify-center mx-auto mb-md text-secondary">
+                        <span class="material-symbols-outlined text-3xl">psychology</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-sm">AI Solutions</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Integrate intelligent AI capabilities
+                        into your products to provide cutting-edge features and user experiences.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. CONTACT -->
+        <div class="w-full bg-primary text-on-primary transition-colors duration-300">
+            <section class="px-gutter md:px-xl py-xxl max-w-container-max mx-auto text-center" id="contact">
+                <div class="max-w-3xl mx-auto space-y-md">
+                    <h2
+                        class="font-display-mobile text-display-mobile md:font-display md:text-display text-current tracking-tighter">
+                        Let's Work Together</h2>
+                    <p class="font-body-lg text-body-lg opacity-80 mb-xl">I'm currently available for freelance
+                        projects and full-time opportunities. Whether you have a question or just want to say hi, I'll
+                        try
+                        my best to get back to you!</p>
+                    <a class="inline-flex items-center justify-center px-xl py-md bg-on-primary text-primary font-label-md text-label-md rounded hover:opacity-80 transition-all duration-200 text-lg"
+                        href="mailto:remarkablerobin09@gmail.com">
+                        remarkablerobin09@gmail.com
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="w-full bg-primary text-on-primary border-t border-outline-variant/30 dark:border-outline/20 transition-colors duration-300">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center px-gutter md:px-xl py-lg max-w-container-max mx-auto gap-md">
+            <div class="font-headline-md text-headline-md text-current">
+                RKVP_
+            </div>
+            <p class="font-body-md text-body-md opacity-80 transition-opacity">
+                © 2026 Robin Kiel Pineda All Rights Reserved.
+            </p>
+            <div class="flex gap-md">
+                <a class="font-body-md text-body-md opacity-80 transition-opacity hover:opacity-100 underline transition-all duration-200"
+                    href="https://github.com/RobinKielll" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="font-body-md text-body-md opacity-80 transition-opacity hover:opacity-100 underline transition-all duration-200"
+                    href="https://www.facebook.com/robin.kie.9" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a class="font-body-md text-body-md opacity-80 transition-opacity hover:opacity-100 underline transition-all duration-200"
+                    href="mailto:remarkablerobin09@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        // Check local storage or system preference
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', function () {
+            // toggle icons
+            document.documentElement.classList.toggle('dark');
+
+            // save to localstorage
+            if (document.documentElement.classList.contains('dark')) {
+                localStorage.setItem('color-theme', 'dark');
+            } else {
+                localStorage.setItem('color-theme', 'light');
+            }
+        });
+
+        // Active Nav Link Highlighting
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('nav a');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '-40% 0px -60% 0px', // Trigger when section hits middle of screen
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    navLinks.forEach(link => {
+                        const href = link.getAttribute('href');
+                        if (href === `#${activeId}`) {
+                            // Active styling
+                            link.classList.remove('text-on-surface-variant', 'dark:text-on-surface-variant', 'hover:text-primary', 'dark:hover:text-on-surface', 'transition-colors', 'duration-200');
+                            link.classList.add('text-primary', 'dark:text-on-surface', 'font-semibold', 'border-b', 'border-primary', 'dark:border-on-surface', 'pb-1');
+                        } else {
+                            // Inactive styling
+                            link.classList.add('text-on-surface-variant', 'dark:text-on-surface-variant', 'hover:text-primary', 'dark:hover:text-on-surface', 'transition-colors', 'duration-200');
+                            link.classList.remove('text-primary', 'dark:text-on-surface', 'font-semibold', 'border-b', 'border-primary', 'dark:border-on-surface', 'pb-1');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => observer.observe(section));
+    </script>
+</body>
+
+</html>
